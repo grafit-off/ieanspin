@@ -25,6 +25,17 @@
 
 	font-family: $ff;
 	font-size: $fz-text;
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 8px;
+		background-color: #fff;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 20px;
+
+		background-color: #000;
+	}
 }
 
 .header {

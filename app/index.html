@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="html">
+<html lang="pl" class="html">
 
 <head>
 	<!-- Кодировка -->
@@ -17,7 +17,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<!-- Ссылка на сайт -->
-	<meta name="canonical" href=""/>
+	<meta name="canonical" href="" />
 
 	<!--  Индексирование странички
 		<meta name="robots" content="" />
@@ -91,27 +91,136 @@
 	<meta name="theme-color" content="#ffffff">
 	<!--  -->
 
-	<link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin />
-	<link rel="preload" href="fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin />
-	<link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
-	<link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+	<link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
-	<!-- <link rel="stylesheet" href="resources/libs/swiper-bundle.min.css" /> -->
 	<link rel="stylesheet" href="css/main.min.css" />
-	<title>App Title</title>
+	<title>LEASPIN - redesigning your business</title>
 </head>
 
 <body class="body">
 	<header class="header fixed-padding" id="header">
 	<div class="header__container container">
-		HEADER
+		<a class="header__logo link-reset">
+			<img src="img/logo.png" alt="Logo" class="header__img">
+		</a>
+		<nav class="header__nav nav">
+			<ul class="nav__list list-reset">
+				<li class="nav__item">
+					<a href="#" class="nav__link link-reset">KNOW-HOW</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link link-reset">O NAS</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link link-reset">BLOG</a>
+				</li>
+				<li class="nav__item">
+					<a href="#" class="nav__link link-reset">KONTAKT</a>
+				</li>
+			</ul>
+		</nav>
+		<button class="header__burger burger btn-reset" aria-label="Open Menu">
+			<span class="burger__line"></span>
+		</button>
 	</div>
 </header>
 	<main class="main-content">
 		<section class="hero" id="hero">
 	<div class="hero__container container">
-		HERO
-		<h1 class="hero__heading">I'm heading into HERO section!</h1>
+		<div class="hero__promo">
+			<h1 class="hero__heading main-heading text-reset">
+				<span class="hero__first-line">
+					<span class="hero__spin">Spin!</span>
+					[re]designing</span>
+				<span class="hero__second-line">your business</span>
+			</h1>
+		</div>
+
+
+		<div class="hero__info">
+			<p class="hero__text main-text text-reset">
+				Pomagamy rozwijać progresywne firmy, zespoły i kompetencje w coraz szybciej zmieniającym się świecie.
+			</p>
+			<div class="hero__block">
+				<p class="hero__text hero__meet main-text text-reset">
+					Poznajmy się!
+				</p>
+				<a href="#" class="hero__link link-reset">Umów się na bezpłatną konsultację</a>
+			</div>
+		</div>
+	</div>
+</section>
+		<section class="help" id="help">
+	<div class="help__container container">
+		<h2 class="help__heading subheading text-reset">
+			Jak możemy pomóc
+		</h2>
+		<ul class="help__list list-reset">
+			<li class="help__item">
+				<p class="help__type text-reset">
+					Transformacje
+				</p>
+				<div class="help__info">
+					<h3 class="help__title text-reset">
+						Agile Lean Brand Digital innovation
+					</h3>
+					<div class="help__icon">
+						<svg class="help__arrow">
+							<use xlink:href="img/sprite.svg#arrow"></use>
+						</svg>
+					</div>
+				</div>
+				<a href="#" class="help__link" aria-label="Visit"></a>
+			</li>
+			<li class="help__item">
+				<p class="help__type text-reset">
+					Wsparcie
+				</p>
+				<div class="help__info">
+					<h3 class="help__title text-reset">
+						Doradztwo ・Narzędzia ・Coaching menedżerski
+					</h3>
+					<div class="help__icon">
+						<svg class="help__arrow">
+							<use xlink:href="img/sprite.svg#arrow"></use>
+						</svg>
+					</div>
+				</div>
+				<a href="#" class="help__link" aria-label="Visit"></a>
+			</li>
+			<li class="help__item">
+				<p class="help__type text-reset">
+					Rozwój
+				</p>
+				<div class="help__info">
+					<h3 class="help__title text-reset">
+						Warsztaty・Symulacje ・Szkolenia hybrydowe
+					</h3>
+					<div class="help__icon">
+						<svg class="help__arrow">
+							<use xlink:href="img/sprite.svg#arrow"></use>
+						</svg>
+					</div>
+				</div>
+				<a href="#" class="help__link" aria-label="Visit"></a>
+			</li>
+			<li class="help__item">
+				<p class="help__type text-reset">
+					Przedsiębiorczość
+				</p>
+				<div class="help__info">
+					<h3 class="help__title text-reset">
+						Mentoring・Relacje wspólnicze・Nowy biznes
+					</h3>
+					<div class="help__icon">
+						<svg class="help__arrow">
+							<use xlink:href="img/sprite.svg#arrow"></use>
+						</svg>
+					</div>
+				</div>
+				<a href="#" class="help__link" aria-label="Visit"></a>
+			</li>
+		</ul>
 	</div>
 </section>
 
@@ -121,9 +230,7 @@
 		FOOTER
 	</div>
 </footer>
-	
 
-	<!-- <script src="resources/libs/swiper-bundle.min.js"></script> -->
 	<script src="js/main.js"></script>
 </body>
 
