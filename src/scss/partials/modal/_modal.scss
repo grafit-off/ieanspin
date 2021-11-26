@@ -1,0 +1,103 @@
+/* Modal */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	width: 100%;
+	height: 100%;
+
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	opacity: 0;
+	visibility: hidden;
+
+	transition: opacity 0.7s ease, visibility 0.7s ease;
+	&::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+	.modal.open &__content {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		min-height: 80vh;
+
+		padding: 30px;
+	}
+	&__content {
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+
+		padding: 30px;
+
+		border-radius: 30px;
+		background-color: #f2eef7;
+		opacity: 0;
+		color: black;
+
+		transform: translate(0px, -100%);
+		transition: opacity 0.7s ease, transform 0.7s ease;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: 15px;
+
+		display: block;
+
+		background: transparent;
+		color: black;
+
+		font-size: 32px;
+
+		cursor: pointer;
+		transition: transform 0.2s ease-in;
+		&:focus:not(:focus-visible) {
+			outline: none;
+		}
+		@media (max-width: $md3) {
+			outline: none;
+		}
+		@media (min-width: $md3) {
+			&:hover {
+				transform: scale(1.2);
+			}
+			&:focus {
+				transform: scale(1.2);
+			}
+		}
+	}
+	&__title {
+	}
+
+	&__desc {
+	}
+
+	&__body {
+	}
+}
+// -- //

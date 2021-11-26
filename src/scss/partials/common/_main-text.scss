@@ -1,0 +1,14 @@
+.main-text {
+	font-weight: 400;
+	font-size: $fz-text;
+	line-height: 1.1;
+	@media (max-width: $md2) {
+		font-size: 16px;
+	}
+	@media (max-width: $md3) {
+		font-size: 16px;
+	}
+	@media (max-width: $md4) {
+		font-size: 16px;
+	}
+}

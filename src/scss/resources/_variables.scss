@@ -1,0 +1,25 @@
+:root {
+	--color-bg: #fff;
+	--color-font: #000;
+}
+
+/* .light-theme {
+	--color-bg: #fff;
+}
+.dark-theme {
+	--color-bg: #191919;
+} */
+
+$fz-text: 18px;
+$fz-heading: 64px;
+
+$ff: "FuturaPT", sans-serif;
+
+$minWidth: 320;
+$maxWidth: 1920px; // Разрешение макета
+$maxWidthContainer: 1492px; // Разрешение контейнера
+
+$md1: $maxWidthContainer + 15px; //desktop
+$md2: 991.98px; // Tablet
+$md3: 767.98px; // Mobile #1
+$md4: 479.98px; // Mobile #2
