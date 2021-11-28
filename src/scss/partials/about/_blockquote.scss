@@ -1,0 +1,11 @@
+.blockquote {
+	color: var(--color-black);
+
+	font-size: 18px;
+	line-height: 23px;
+	text-align: center;
+
+	&__footer {
+		display: inline-block;
+	}
+}
