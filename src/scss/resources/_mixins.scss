@@ -30,12 +30,12 @@
 }
 // MediaQuerys
 @mixin maxwidth($maxWidth) {
-	@media (max-width: calc($maxWidth + px)) {
+	@media (max-width: $maxWidth + px) {
 		@content;
 	}
 }
 @mixin minwidth($minWidth) {
-	@media (min-width: calc($minWidth+px)) {
+	@media (min-width: $minWidth+px) {
 		@content;
 	}
 }

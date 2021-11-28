@@ -1,0 +1,35 @@
+.topics {
+	@include maxwidth(500) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+		@include maxwidth(500) {
+			&:not(:last-child) {
+				margin-bottom: 0;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__btn {
+		position: relative;
+		color: var(--color-white);
+
+		font-size: 14px;
+		transition: color 0.3s ease;
+		&--active {
+			color: var(--color-red);
+			transition: color 0.3s ease;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-red);
+			}
+		}
+	}
+}

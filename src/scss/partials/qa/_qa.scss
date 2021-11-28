@@ -1,0 +1,77 @@
+.qa {
+	padding: 90px 0;
+	background-color: var(--color-black);
+	overflow: hidden;
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	&__topics {
+		flex: 0 0 30%;
+		margin-bottom: 130px;
+		@media (max-width: $md3) {
+			flex: 0 0 auto;
+			margin-right: 40px;
+			margin-bottom: 60px;
+		}
+		@include maxwidth(500) {
+			flex: 0 0 100%;
+
+			margin-right: 0px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__questions {
+		flex: 0 0 70%;
+
+		display: flex;
+		margin-bottom: 130px;
+		overflow: hidden;
+		@media (max-width: $md3) {
+			flex: 1 1 70%;
+			margin-bottom: 40px;
+		}
+		@include maxwidth(500) {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__item {
+		flex: 0 0 100%;
+	}
+
+	&__topics-line {
+		flex: 0 0 100%;
+		display: flex;
+
+		overflow: visible;
+		transition: transform 0.4s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+	}
+
+	&__topic {
+		color: var(--color-gray);
+
+		font-size: 114px;
+		line-height: 148px;
+
+		transition: color 0.3s ease;
+		&:not(:last-child) {
+			padding-right: 50px;
+		}
+		&--active {
+			color: var(--color-red);
+			transition: color 0.3s ease;
+		}
+		@media (max-width: $md3) {
+			font-size: 60px;
+			line-height: 70px;
+		}
+		@media (max-width: $md4) {
+			font-size: 36px;
+			line-height: 40px;
+		}
+	}
+}
