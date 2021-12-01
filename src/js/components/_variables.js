@@ -5,6 +5,7 @@ const media = window.matchMedia("(max-width: 767px)");
 
 const body = document.querySelector('.body');
 const burgerBtn = document.querySelector('.burger');
+const header = document.querySelector('.header');
 const headerNav = document.querySelector('.nav');
 const qa = document.querySelector('.qa__container');
 const toTopBtn = document.querySelector('.footer__btn');

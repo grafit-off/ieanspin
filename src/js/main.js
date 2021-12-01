@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	})
 
-	headerNav.addEventListener('click', (e) => {
+	header.addEventListener('click', (e) => {
 		const target = e.target;
 
 		if (target.classList.contains('nav__link')) {
@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			let hash = target.hash;
 			scrollToTarget(hash, media);
 			media.matches ? burgerCl.close() : null;
+		}
+		if (target.closest('.header__logo')) {
+			e.preventDefault();
+			scrollToTarget('#hero', media);
 		}
 	})
 
@@ -36,6 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener('scroll', () => {
 		ScrollDebounce.init();
 	})
-
-
 })
