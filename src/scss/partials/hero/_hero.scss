@@ -20,10 +20,7 @@
 		align-items: center;
 		justify-content: center;
 
-		background: url(../img/hero-bg.png) center/533px no-repeat;
-		@media (max-width: $md3) {
-			background-size: contain;
-		}
+		background: url(../img/hero-bg.png) center/contain no-repeat;
 	}
 	&__heading {
 		text-align: center;

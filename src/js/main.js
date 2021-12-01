@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Includes
 	// @include('components/_burger.js');
 	// @include('components/_qa.js');
+	// @include('components/_debounce.js');
 	// @include('components/_variables.js');
+	// @include('components/_foo.js');
 	// @include('resources/_scrollLockIOS.js');
 	// @include('resources/_animateOnScroll.js');
 	// -- //
@@ -13,64 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
 			qaCl.showTarget(target);
 		}
 	})
-	qaCl.init();
-})
 
-/*
-	qa.addEventListener('click', (e) => {
+	headerNav.addEventListener('click', (e) => {
 		const target = e.target;
-		if (target.classList.contains('topics__btn')) {
-			if (prevTargets) {
-				prevTargets.btn.classList.remove('topics__btn--active');
-				prevTargets.btn.ariaExpanded = false;
-				prevTargets.line.classList.remove('qa__topic--active');
-				prevTargets.question.classList.remove('qa-item--active');
-			}
-			showQa(e.target);
+
+		if (target.classList.contains('nav__link')) {
+			e.preventDefault();
+			let hash = target.hash;
+			scrollToTarget(hash, media);
+			media.matches ? burgerCl.close() : null;
 		}
 	})
 
-	const createQaLine = () => {
-		let qaLineEls = '';
-		qaBtns.forEach((el) => {
-			qaLineEls += `
-			<span class="qa__topic" data-path="${el.dataset.path}">
-					${el.textContent}
-				</span>
-			`
-		});
-		qaLine.innerHTML = qaLineEls;
-	}
-	createQaLine();
-	let prevTargets;
-	const showQa = (target) => {
-		const path = target.dataset.path;
+	toTopBtn.addEventListener('click', () => {
+		scrollToTarget('#hero', media);
+	})
 
-		document.querySelectorAll(`.qa-item`).forEach((el) => {
-			el.style.transform = `translateX(-${parseInt(path) - 1}00%)`;
-		});
+	qaCl.init();
 
-		target.classList.add('topics__btn--active');
-		target.ariaExpanded = true;
-		document.querySelector(`.qa-item[data-path="${path}"]`).classList.add('qa-item--active');
-		qaLine.querySelector(`.qa__topic[data-path="${path}"]`).classList.add('qa__topic--active');
+	window.addEventListener('scroll', () => {
+		ScrollDebounce.init();
+	})
 
-		let elWidth = 0;
 
-		for (let index = 0; index < qaLine.querySelectorAll(`.qa__topic`).length; index++) {
-			const element = qaLine.querySelectorAll(`.qa__topic`)[index];
-			if (element.dataset.path === path) {
-				break;
-			}
-			elWidth += element.offsetWidth;
-		}
-		qaLine.style.transform = `translateX(-${elWidth}px)`;
-
-		prevTargets = {
-			btn: target,
-			line: qaLine.querySelector(`.qa__topic[data-path="${path}"]`),
-			question: document.querySelector(`.qa-item[data-path="${path}"]`)
-		};
-	}
-	showQa(document.querySelector('.topics__btn[data-path="1"]'))
-*/
+})

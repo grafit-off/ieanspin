@@ -1,0 +1,41 @@
+.running-line {
+	overflow: hidden;
+	&__row {
+		display: flex;
+		white-space: nowrap;
+		&:not(:last-child) {
+			margin-bottom: 75px;
+			@media (max-width: $md3) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__item {
+		flex-shrink: 0;
+		animation: marqueeLine 5s linear infinite;
+	}
+
+	&__word {
+		display: inline-block;
+
+		color: var(--color-silver);
+
+		white-space: nowrap;
+
+		margin-right: 60px;
+		&--black {
+			color: var(--color-black);
+		}
+	}
+}
+
+@keyframes marqueeLine {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}

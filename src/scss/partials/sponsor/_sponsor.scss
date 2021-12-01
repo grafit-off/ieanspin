@@ -1,6 +1,8 @@
 .sponsor {
 	padding: 90px 0;
-
+	@media (max-width: $md3) {
+		padding: 45px 0;
+	}
 	&__container {
 	}
 

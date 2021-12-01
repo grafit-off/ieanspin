@@ -5,4 +5,7 @@
 	line-height: 34px;
 	letter-spacing: 0.44px;
 	text-transform: uppercase;
+	&--white {
+		color: var(--color-white);
+	}
 }

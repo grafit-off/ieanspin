@@ -1,0 +1,115 @@
+.bussines {
+	padding: 90px 0;
+	@media (max-width: $md3) {
+		padding: 45px 0;
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(10, 1fr);
+		grid-gap: 40px 150px;
+		align-items: end;
+		@media (max-width: $md1) {
+			grid-gap: 30px 70px;
+		}
+		@media (max-width: $md3) {
+			grid-template-rows: auto 1fr auto;
+			grid-gap: 30px;
+		}
+	}
+
+	&__heading {
+		grid-row: span 3;
+
+		color: var(--color-black);
+
+		font-size: 46px;
+		line-height: 57px;
+		@media (max-width: $md2) {
+			font-size: 36px;
+			line-height: 40px;
+		}
+		@media (max-width: $md3) {
+			grid-column: span 2;
+			grid-row: 1;
+
+			font-size: 28px;
+			line-height: 30px;
+		}
+	}
+
+	&__image {
+		grid-row: span 7;
+		height: 100%;
+		width: 100%;
+		@media (max-width: $md3) {
+			grid-column: 1;
+			grid-row: 2;
+			&:nth-child(2) {
+				grid-column: 2;
+			}
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		@media (max-width: $md3) {
+			max-height: 400px;
+		}
+	}
+
+	&__info {
+		grid-row: span 3;
+		align-self: start;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		height: 100%;
+		@media (max-width: $md3) {
+			grid-column: span 2;
+			grid-row: 3;
+		}
+	}
+	&__text {
+		color: var(--color-black);
+
+		font-size: 20px;
+		line-height: 25px;
+		@media (max-width: $md3) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	&__signatures {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__item {
+		flex: 0 0 calc(50% - 15px);
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+
+	&__signature {
+		width: 100%;
+		height: 100%;
+		max-width: 240px;
+		max-height: 130px;
+		object-fit: contain;
+	}
+
+	&__name {
+		display: block;
+		color: var(--color-black);
+
+		font-size: 16px;
+		line-height: 21px;
+	}
+}

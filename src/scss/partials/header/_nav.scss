@@ -54,6 +54,8 @@
 		font-size: 12px;
 		letter-spacing: 1px;
 		text-transform: uppercase;
+
+		transition: color 0.3s ease;
 		&::after {
 			content: "";
 			position: absolute;
@@ -66,12 +68,16 @@
 			will-change: width;
 			background-color: currentColor;
 
-			transition: width 0.3s ease;
+			transition: width 0.3s ease, background-color 0.3s ease;
 		}
 		&--active {
+			color: var(--color-red);
+			transition: color 0.3s ease;
+
 			&::after {
 				width: 100%;
-				transition: width 0.3s ease;
+				background-color: var(--color-red);
+				transition: width 0.3s ease, background-color 0.3s ease;
 			}
 		}
 
