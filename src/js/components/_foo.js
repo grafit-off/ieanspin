@@ -18,7 +18,6 @@ function showActiveLink(links, activeClass, offsetDifference) {
 
 function scrollToTarget(id, media) {
 	const target = document.querySelector(id);
-
 	if (!isSmoothScrollSupported && target !== null) {
 		const bodyRect = document.body.getBoundingClientRect();
 		const elemRect = target.getBoundingClientRect();
