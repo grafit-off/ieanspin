@@ -6,7 +6,7 @@
 Create responsive and adaptive landing page according to the design in Figma
 
 ### 📜Description
-Creating a responsive and adaptive landing page. The site has semantic and accessible markup. It was decided to develop custom elements like an accordion, a slider, a smooth scroll and more. I used technologies such as Flexbox and Grid for the correct display of the site on different devices.
+A responsive and adaptive landing page. The site has semantic and accessible markup. It was decided to develop custom elements like an accordion, a slider, a smooth scroll and more. I used technologies such as Flexbox and Grid for the correct display of the site on different devices.
 
 ### 🖼Results
 1. Responsive layout for different devices
